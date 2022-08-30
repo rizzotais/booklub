@@ -10,3 +10,7 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+
+// to connect other folders
+@import "components/general_components/index";
+@import "components/home_components/index";
