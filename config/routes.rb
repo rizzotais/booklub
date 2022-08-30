@@ -5,5 +5,7 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "articles#index"
-  get "books/:id", to: "books#show"
+
+  resources :books, only: %i[index show]
+
 end
