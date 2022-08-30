@@ -1,10 +1,14 @@
 <h1>Books</h1>
 
-<div class='container w-75 m-5 mx-auto'>
-  <div class="row">
-    <% @books.each do |book| %>
-      <div class="col mb-3 d-flex float-left">
+<div class="cards-index">
+  <img src="" alt="Avatar" style="width:100%">
+  <div class="container">
+      <% @books.each do |book| %>
         <%= link_to book_path(book) do %>
+
+        <h4><b><%= book.title %></b></h4>
+    <p><%= book.author %></p>
+
           <div class="card" style="width: 18rem">
             <%# <%= cl_image_tag boat.photo.key, crop: :fill, class: "card-img-top cards-img" %> %>
             <div class="card-body">
@@ -12,8 +16,9 @@
               <p class="card-text"> <%= book.author %></p>
             </div>
           </div>
+
         <% end %>
-      </div>
-    <% end %>
+      <% end %>
+
   </div>
 </div>
