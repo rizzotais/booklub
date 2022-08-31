@@ -1,11 +1,19 @@
 <nav class="navbar" style="background-color: #e3f2fd;">
   <div class="container-fluid justify-content-center navbar-color">
   <a class="navbar-brand" href="#">I looking for...</a>
-      <i class="fa-solid fa-magnifying-glass search-navbar"></i>
-    <form class="d-flex-" role="search">
-      <input class="form-control me-2 input-navbar" type="search" placeholder="I'm want to find..." >
-    </form>
-      <i class="fa-solid fa-circle-xmark input2-navbar"></i>
+
+
+    <%= form_with url: books_path, method: :get, class: "d-flex" do %>
+      <%= button_tag type: 'submit', class: "button postfix search-navbar" do %>
+        <i class="fa-solid fa-magnifying-glass"></i>
+      <% end %>
+      <%= text_field_tag :query,
+        params[:query],
+        class: "form-control input-navbar",
+        placeholder: "I want to find..."
+      %>
+    <% end %>
+    <i class="fa-solid fa-circle-xmark input2-navbar"></i>
   </div>
 </nav>
 
@@ -32,8 +40,8 @@
 
 <div class="container">
   <div class="row">
-    <div class="col-3 mt-3 border-img">
-      <img src="https://picsum.photos/id/237/200/300">
+    <div class="col-3 mt-3">
+      <img src="https://picsum.photos/id/237/200/300" class="border-img">
     </div>
     <div class="col-6 mt-3">
       <div class="card border-text" >
