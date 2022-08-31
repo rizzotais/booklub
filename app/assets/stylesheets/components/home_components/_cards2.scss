@@ -19,6 +19,11 @@
 // a {
 //   color: inherit;
 // }
+.home-cards-crid{
+  display: flex;
+  place-content: center;
+  padding-top: 1cm;
+}
 
 .cards2-wrapper {
   display: grid;
@@ -32,11 +37,13 @@
 }
 
 .card2 {
+  // position: relative;
+  // align-items: flex-end;
   font-family: 'Heebo';
   --bg-filter-opacity: 0.5;
   background-image: linear-gradient(rgba(0,0,0,var(--bg-filter-opacity)),rgba(0,0,0,var(--bg-filter-opacity))), var(--bg-img);
   height: 20em;
-  width: 15em;
+  width: 20em;
   font-size: 1.5em;
   color: white;
   border-radius: 1em;
@@ -52,6 +59,7 @@
   overflow: hidden;
   border: 10px solid #ccc;
   text-decoration: none;
+  margin-right: 2cm;
 }
 
 // .card2:hover:hover {

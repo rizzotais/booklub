@@ -1,9 +1,15 @@
 
 @import url('https://fonts.googleapis.com/css?family=Cardo:400i|Rubik:400,700&display=swap');
 
+.all{
+  background-color: #B2C8DF;
+}
+
+
 .category{
   text-align: center;
   margin-top: 3rem;
+  padding-top: 2rem;
 }
 
 $imageIds: '1517021897933-0e0319cfbc28', '1533903345306-15d1c30952de', '1545243424-0ce743321e11', '1531306728370-e2ebd9d7bb99';
@@ -27,17 +33,18 @@ html, body {
 }
 
 // body {
-//   display: grid;
-//   place-items: center;
-// }
+  //   display: grid;
+  //   place-items: center;
+  // }
 
-.page-content {
-  display: grid;
-  grid-gap: 1rem;
-  padding: 1rem;
-  max-width: 1024px;
-  margin: 0 auto;
-  font-family: var(--font-sans);
+  .page-content {
+    display: grid;
+    grid-gap: 1rem;
+    padding: 1rem;
+    max-width: 1024px;
+    margin: 0 auto;
+    font-family: var(--font-sans);
+    padding-bottom: 8rem;
 
   @media (min-width: $bp-md) {
     grid-template-columns: repeat(2, 1fr);
@@ -175,7 +182,7 @@ html, body {
 }
 
 @media (hover: hover) and (min-width: $bp-md) {
-  .card:after {
+  .card3:after {
     transform: translateY(0);
   }
 
@@ -191,8 +198,8 @@ html, body {
     }
   }
 
-  .card:hover,
-  .card:focus-within {
+  .card3:hover,
+  .card3:focus-within {
     align-items: center;
 
     &:before { transform: translateY(-4%); }
@@ -209,7 +216,7 @@ html, body {
     }
   }
 
-  .card:focus-within {
+  .card3:focus-within {
     &:before,
     &:after,
     .content,

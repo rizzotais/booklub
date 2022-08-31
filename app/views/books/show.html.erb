@@ -1,8 +1,6 @@
 <nav class="navbar" style="background-color: #e3f2fd;">
   <div class="container-fluid justify-content-center navbar-color">
   <a class="navbar-brand" href="#">I looking for...</a>
-
-
     <%= form_with url: books_path, method: :get, class: "d-flex" do %>
       <%= button_tag type: 'submit', class: "button postfix search-navbar" do %>
         <i class="fa-solid fa-magnifying-glass"></i>
@@ -19,8 +17,6 @@
 
 <nav class="navbar navbar-expand-lg bg-light">
   <div class="container-fluid">
-
-
     <div class="collapse navbar-collapse justify-content-center" id="navbarNavAltMarkup">
       <div class="navbar-nav navbar2-colors">
         <a class="nav-link active" aria-current="page" href="#">Romance</a>
@@ -35,23 +31,13 @@
   </div>
 </nav>
 
-
-
-
 <div class="container">
   <div class="row">
     <div class="col-3 mt-3">
-
       <img src="https://picsum.photos/id/237/200/300" class="border-img">
     </div>
     <div class="col-6 mt-3">
-      <div class="card border-text" >
-
-      <img src="https://picsum.photos/id/237/200/300">
-    </div>
-    <div class="col-6 mt-3">
-      <div class="card" >
-
+      <div class="card-text" >
         <h1 class="text-center"><%= @book.title %></h1>
         <p class="text-center"><%= @book.author %></p>
         <p class="text-center"><%= @book.category %></p>
@@ -61,11 +47,7 @@
       </div>
     </div>
     <div class="col-3 align-self-center mx-auto">
-
-      <a href="..." class="btn btn-primary button-colors">Add to my list</a>
-
-      <a href="..." class="btn btn-primary">Add to my list</a>
-
+      <a href="..." class="btn button-colors-2" style="background-color: #6E85B7;">Add to my list</a>
     </div>
   </div>
 </div>
