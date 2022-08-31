@@ -1,12 +1,79 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
 
-
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/background.png);">
+<%# banner %>
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),">
   <div class="container">
-    <h1>Le Wagon brings <strong>tech skills</strong> to <strong>creative people</strong>!</h1>
-    <p>Change your life and learn to code at one of our campuses around the world.</p>
+    <h1>A new way of find your book and connecting with readers!</h1>
+    <p>Create your lists and share your short stories.</p>
     <a class="btn btn-flat" href="#">Apply now</a>
   </div>
 </div>
 
+<%# Cards 2 %>
+<section class="cards-wrapper">
+  <div class="card-grid-space">
+    <div class="num"></div>
+    <a class="card2" href="https://codetheweb.blog/2017/10/06/html-syntax/" style="--bg-img: url(https://images1-focus-opensocial.googleusercontent.com/gadgets/proxy?container=focus&resize_w=1500&url=https://codetheweb.blog/assets/img/posts/html-syntax/cover.jpg)">
+      <div>
+        <h1>HTML Syntax</h1>
+        <p>The syntax of a language is how it works. How to actually write it. Learn HTML syntax…</p>
+        <div class="date">6 Oct 2017</div>
+        <div class="tags">
+          <div class="tag">HTML</div>
+        </div>
+      </div>
+    </a>
+  </div>
+  <div class="card-grid-space">
+    <div class="num"></div>
+    <a class="card2" href="https://codetheweb.blog/2017/10/09/basic-types-of-html-tags/" style="--bg-img: url('https://images1-focus-opensocial.googleusercontent.com/gadgets/proxy?container=focus&resize_w=1500&url=https://codetheweb.blog/assets/img/posts/basic-types-of-html-tags/cover.jpg')">
+      <div>
+        <h1>Basic types of HTML tags</h1>
+        <p>Learn about some of the most common HTML tags…</p>
+        <div class="date">9 Oct 2017</div>
+        <div class="tags">
+          <div class="tag">HTML</div>
+        </div>
+      </div>
+    </a>
+  </div>
+
+  <!-- https://images.unsplash.com/photo-1520839090488-4a6c211e2f94?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=38951b8650067840307cba514b554ba5&auto=format&fit=crop&w=1350&q=80 -->
+</section>
+
+<%# Card %>
+
+<div>
+  <div class= category>
+    <h1>Name of the category</h1>
+  </div>
+  <main class="page-content">
+    <div class="card">
+      <div class="content">
+        <h2 class="title">Mountain View</h2>
+        <p class="copy">Check out all of these gorgeous mountain trips with beautiful views of, you guessed it, the mountains</p>
+        <button class="btn">View Trips</button>
+      </div>
+    </div>
+    <div class="card">
+      <div class="content">
+        <h2 class="title">To The Beach</h2>
+        <p class="copy">Plan your next beach trip with these fabulous destinations</p>
+        <button class="btn">View Trips</button>
+      </div>
+    </div>
+    <div class="card">
+      <div class="content">
+        <h2 class="title">Desert Destinations</h2>
+        <p class="copy">It's the desert you've always dreamed of</p>
+        <button class="btn">Book Now</button>
+      </div>
+    </div>
+    <div class="card">
+      <div class="content">
+        <h2 class="title">Explore The Galaxy</h2>
+        <p class="copy">Seriously, straight up, just blast off into outer space today</p>
+        <button class="btn">Book Now</button>
+      </div>
+    </div>
+  </main>
+</div>

@@ -36,4 +36,8 @@ book["items"].each do |book_hash|
     book.author = book_hash["volumeInfo"]["authors"][0]
     book.save!
   end
+  if book_hash["volumeInfo"]["imageLinks"]
+    book.img_book = book_hash["volumeInfo"]["imageLinks"]["smallThumbnail"]
+    book.save!
+  end
 end
