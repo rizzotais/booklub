@@ -21,6 +21,8 @@
 // }
 .home-cards-crid{
   display: flex;
+  place-content: center;
+  padding-top: 1cm;
 }
 
 .cards2-wrapper {
@@ -57,6 +59,7 @@
   overflow: hidden;
   border: 10px solid #ccc;
   text-decoration: none;
+  margin-right: 2cm;
 }
 
 // .card2:hover:hover {
