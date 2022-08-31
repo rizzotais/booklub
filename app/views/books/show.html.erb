@@ -1,9 +1,11 @@
 <nav class="navbar" style="background-color: #e3f2fd;">
-  <div class="container-fluid">
-  <a class="navbar-brand" href="#">Im'looking for...</a>
+  <div class="container-fluid justify-content-center navbar-color">
+  <a class="navbar-brand" href="#">I looking for...</a>
+      <i class="fa-solid fa-magnifying-glass search-navbar"></i>
     <form class="d-flex-" role="search">
-      <input class="form-control me-2" type="search" placeholder="I'm want to find..." >
+      <input class="form-control me-2 input-navbar" type="search" placeholder="I'm want to find..." >
     </form>
+      <i class="fa-solid fa-circle-xmark input2-navbar"></i>
   </div>
 </nav>
 
@@ -11,8 +13,8 @@
   <div class="container-fluid">
 
 
-    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-      <div class="navbar-nav">
+    <div class="collapse navbar-collapse justify-content-center" id="navbarNavAltMarkup">
+      <div class="navbar-nav navbar2-colors">
         <a class="nav-link active" aria-current="page" href="#">Romance</a>
         <a class="nav-link active" aria-current="page" href="#">Novel</a>
         <a class="nav-link active" aria-current="page" href="#">History</a>
@@ -30,11 +32,11 @@
 
 <div class="container">
   <div class="row">
-    <div class="col-3 mt-3">
+    <div class="col-3 mt-3 border-img">
       <img src="https://picsum.photos/id/237/200/300">
     </div>
     <div class="col-6 mt-3">
-      <div class="card" >
+      <div class="card border-text" >
         <h1 class="text-center"><%= @book.title %></h1>
         <p class="text-center"><%= @book.author %></p>
         <p class="text-center"><%= @book.category %></p>
@@ -44,7 +46,7 @@
       </div>
     </div>
     <div class="col-3 align-self-center mx-auto">
-      <a href="..." class="btn btn-primary">Add to my list</a>
+      <a href="..." class="btn btn-primary button-colors">Add to my list</a>
     </div>
   </div>
 </div>
