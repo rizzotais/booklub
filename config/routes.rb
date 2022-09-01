@@ -9,4 +9,5 @@ Rails.application.routes.draw do
   # root "articles#index"
 
   resources :books, only: %i[index show]
+  resources :users, only: [:show]
 end
