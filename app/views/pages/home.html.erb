@@ -13,14 +13,18 @@
   <div class ="home-cards-crid">
     <div class="card-grid-space">
       <div class="num"></div>
-      <a class="card2" href="https://codetheweb.blog/2017/10/06/html-syntax/" style="--bg-img: url(https://images.unsplash.com/photo-1615677679660-b923aed9b88e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80)">
-        <div>
-          <h1>Books</h1>
-          <p>Watch all our book selection</p>
-          <div class="tags">
+
+
+
+      <%= link_to books_path, class: "home-link" do %>
+        <div class="card2"  style="--bg-img: url(https://images.unsplash.com/photo-1615677679660-b923aed9b88e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80)">
+          <div>
+            <h1>Books</h1>
+            <p>Watch all our book selection</p>
+            <div class="tags"></div>
           </div>
         </div>
-      </a>
+      <% end  %>
     </div>
     <div class="card-grid-space">
       <div class="num"></div>

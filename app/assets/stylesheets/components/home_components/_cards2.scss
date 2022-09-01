@@ -164,6 +164,15 @@
   font-weight: normal;
 }
 
+.home-link {
+  color: white;
+  text-decoration: none;
+}
+
+.home-link:hover {
+  color: black;
+}
+
 /* MEDIA QUERIES */
 @media screen and (max-width: 1285px) {
   .cards-wrapper {
