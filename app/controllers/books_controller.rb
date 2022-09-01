@@ -1,5 +1,6 @@
 class BooksController < ApplicationController
   # before_action :set_book, only: %i[new create]
+  skip_before_action :authenticate_user!, only: :index
 
   def index
     @books = Book.all
