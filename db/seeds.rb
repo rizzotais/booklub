@@ -17,27 +17,30 @@ user.save!
 require "json"
 require "open-uri"
 
-url = "https://www.googleapis.com/books/v1/volumes?q=search+harrypotter"
-book_serialized = URI.open(url).read
-book = JSON.parse(book_serialized)
+array = ["lordoftherings", "thetwilightsaga", "harrypotter", "mebeforeyou", "FiftyShadesofGrey", "disney", "TheChroniclesofNarnia"]
+array.each do |title|
+  url = "https://www.googleapis.com/books/v1/volumes?q=#{title}"
+  book_serialized = URI.open(url).read
+  book = JSON.parse(book_serialized)
 
-book["items"].each do |book_hash|
-  book = Book.create!(
-    title: book_hash["volumeInfo"]["title"],
-    description: book_hash["volumeInfo"]["description"],
-    published_year: book_hash["volumeInfo"]["publishedDate"],
-    num_of_pages: book_hash["volumeInfo"]["pageCount"]
-  )
-  if book_hash["volumeInfo"]["categories"]
-    book.category = book_hash["volumeInfo"]["categories"][0]
-    book.save!
-  end
-  if book_hash["volumeInfo"]["authors"]
-    book.author = book_hash["volumeInfo"]["authors"][0]
-    book.save!
-  end
-  if book_hash["volumeInfo"]["imageLinks"]
-    book.img_book = book_hash["volumeInfo"]["imageLinks"]["smallThumbnail"]
-    book.save!
+  book["items"].each do |book_hash|
+    book = Book.create!(
+      title: book_hash["volumeInfo"]["title"],
+      description: book_hash["volumeInfo"]["description"],
+      published_year: book_hash["volumeInfo"]["publishedDate"],
+      num_of_pages: book_hash["volumeInfo"]["pageCount"]
+    )
+    if book_hash["volumeInfo"]["categories"]
+      book.category = book_hash["volumeInfo"]["categories"][0]
+      book.save!
+    end
+    if book_hash["volumeInfo"]["authors"]
+      book.author = book_hash["volumeInfo"]["authors"][0]
+      book.save!
+    end
+    if book_hash["volumeInfo"]["imageLinks"]
+      book.img_book = book_hash["volumeInfo"]["imageLinks"]["smallThumbnail"]
+      book.save!
+    end
   end
 end

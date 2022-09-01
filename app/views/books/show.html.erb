@@ -1,19 +1,4 @@
-<nav class="navbar" style="background-color: #e3f2fd;">
-  <div class="container-fluid justify-content-center navbar-color">
-  <a class="navbar-brand" href="#">I looking for...</a>
-    <%= form_with url: books_path, method: :get, class: "d-flex" do %>
-      <%= button_tag type: 'submit', class: "button postfix search-navbar" do %>
-        <i class="fa-solid fa-magnifying-glass"></i>
-      <% end %>
-      <%= text_field_tag :query,
-        params[:query],
-        class: "form-control input-navbar",
-        placeholder: "I want to find..."
-      %>
-    <% end %>
-    <i class="fa-solid fa-circle-xmark input2-navbar"></i>
-  </div>
-</nav>
+<%= render "shared/nav_search" %>
 
 <nav class="navbar navbar-expand-lg bg-light">
   <div class="container-fluid">
