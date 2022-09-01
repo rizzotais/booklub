@@ -8,15 +8,19 @@
     <%= f.input :email,
                 required: false,
                 autofocus: true,
+                wrapper_html:{class: "forminside"},
+                label_html:{class: "labelsignup"},
                 input_html: { autocomplete: "email" } %>
     <%= f.input :password,
                 required: false,
+                wrapper_html:{class: "forminside"},
+                label_html:{class: "labelsignup"},
                 input_html: { autocomplete: "current-password" } %>
     <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
   </div>
 
   <div class="form-actions">
-    <%= f.button :submit, "Create!" %>
+    <%= f.button :submit, "Sign in" %>
   </div>
 <% end %>
 
@@ -24,5 +28,5 @@
 
       </div>
   </div>
->
+
 </div>
