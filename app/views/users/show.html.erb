@@ -6,12 +6,15 @@
   <div class="row">
     <p>How many pages have you read so far?</p>
     <p>87</p>
-    
-    <p>Here is your Book List:</p>
-      <%= current_user.list %>
-  </div>
-</div>
-<div class="container">
-  <h3>Check out who else is reading.....</h3>
 
+    <p>Here is your Book List:</p>
+      <% current_user.list.bookmarks.each do |bookmark|%>
+      <div class="card-product">
+        <img src="<%= bookmark.book.img_book %>"/>
+        <div class="card-product-infos">
+          <h2><%= bookmark.book.title %></h2>
+        </div>
+      </div>
+      <% end %>
+  </div>
 </div>
