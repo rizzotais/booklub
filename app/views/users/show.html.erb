@@ -2,18 +2,16 @@
 
 <div class="container">
   <h1>Welcome!</h1>
-  <h3>You are reading></h3>
+  <h3>You are reading <%= @book.title %> </h3>
   <div class="row">
     <p>How many pages have you read so far?</p>
-      <div class="input-group input-group-sm mb-3">
-        <span class="input-group-text" id="inputGroup-sizing-sm">Pages</span>
-        <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
-      </div>
-      <p>Here is your Book List:</p>
+    <p>87</p>
+    
+    <p>Here is your Book List:</p>
       <%= current_user.list %>
   </div>
 </div>
 <div class="container">
   <h3>Check out who else is reading.....</h3>
-  
+
 </div>

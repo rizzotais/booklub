@@ -12,6 +12,12 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "articles#index"
 
-  resources :books, only: %i[index show search]
+  resources :books, only: %i[index show] do
+    resources :bookmarks, only: %i[create]
+  end
+
   resources :users, only: [:show]
+  resources :lists, except: %i[edit update] do
+    resources :reviews, only: %i[new create]
+  end
 end
