@@ -20,7 +20,7 @@
   padding-top: 2rem;
 }
 
-$imageIds: '1517021897933-0e0319cfbc28', '1533903345306-15d1c30952de', '1545243424-0ce743321e11', '1531306728370-e2ebd9d7bb99';
+$imageIds: 'https://kbimages1-a.akamaihd.net/bd02da79-b80a-42ef-a788-168ae2f20393/353/569/90/False/harry-potter-and-the-deathly-hallows-4.jpg','https://images-na.ssl-images-amazon.com/images/I/51WbmTRk-4L._SX331_BO1,204,203,200_.jpg','https://static.bookscovers.es/imagenes/9788445/978844501394.JPG','https://images-na.ssl-images-amazon.com/images/I/41xQKwvEA-L._SX335_BO1,204,203,200_.jpg';
 
 $bp-md: 600px;
 $bp-lg: 800px;
@@ -134,7 +134,7 @@ html, body {
     $i: index($imageIds, $id);
 
     &:nth-child(#{$i}):before {
-      background-image: url(https://images.unsplash.com/photo-#{$id}?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ);
+      background-image: url(#{$id});
     }
   }
 }
@@ -158,6 +158,7 @@ html, body {
   font-size: 1.3rem;
   font-weight: bold;
   line-height: 1.2;
+  color: white
 }
 
 .copy {
