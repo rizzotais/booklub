@@ -9,5 +9,7 @@ class BooksController < ApplicationController
 
   def show
     @book = Book.find(params[:id])
+    @bookmarck = Bookmark.new
+    @list = current_user.list
   end
 end

@@ -18,7 +18,9 @@
       </div>
     </div>
     <div class="col-3 align-self-center mx-auto">
-      <a href="..." class="btn button-colors-2" style="background-color: #6E85B7;">Add to my list</a>
+      <%= simple_form_for [@book, @bookmarck] do |f| %>
+          <%= f.submit "Add to my List", class:"btn button-colors-2", style:"background-color: #6E85B7;" %>
+      <% end %>
     </div>
   </div>
 </div>
