@@ -1,18 +1,18 @@
 <%= render "shared/nav_search" %>
 
 <div class="container">
-  <h1>Welcome!</h1>
-  <h3>You are reading <%= @book.title %> </h3>
+  <h1 class="h1w">Welcome!</h1>
+  <h3 style="padding-left: 200px">You are reading <%= @book.title %> </h3>
   <div class="row">
     <p>How many pages have you read so far?</p>
-    <p>87</p>
-
+    <p style="">87</p>
     <p>Here is your Book List:</p>
       <% current_user.list.bookmarks.each do |bookmark|%>
-      <div class="card-product">
+      <div class="card-usershow">
         <img src="<%= bookmark.book.img_book %>"/>
-        <div class="card-product-infos">
+        <div class="card-usershow-infos">
           <h2><%= bookmark.book.title %></h2>
+          <p><%= bookmark.book.author %></p>
         </div>
       </div>
       <% end %>
