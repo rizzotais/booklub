@@ -10,4 +10,12 @@ class BooksController < ApplicationController
   def show
     @book = Book.find(params[:id])
   end
+
+  def search
+    if params[:query].present?
+      @movies = Movie.where(title: params[:query])
+    else
+      @movies = Movie.all
+    end
+  end
 end
