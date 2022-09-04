@@ -24,5 +24,8 @@
         <button type="button" class="btn btn-dark">Review</button>
       <%end %>
     </div>
+    <%= @book.reviews.each do |r| %>
+    <%= r.comment %>
+    <% end %>
   </div>
 </div>
