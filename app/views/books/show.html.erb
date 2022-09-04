@@ -1,26 +1,28 @@
 <%= render "shared/nav_search" %>
-
 <%= render "shared/navbar3" %>
 
 <div class="container">
   <div class="row">
     <div class="col-3 mt-3">
-       <img src="<%= @book.img_book %>", style="width:200px;"/>
+      <img src="<%= @book.img_book %>", style="width:200px;"/>
     </div>
     <div class="col-6 mt-3">
       <div class="card-text" >
         <h1 class="text-center"><%= @book.title %></h1>
-        <p class="text-center"><%= @book.author %></p>
-        <p class="text-center"><%= @book.category %></p>
-        <p class="text-center"><%= @book.published_year %></p>
-        <p class="text-center"><%= @book.description %></p>
-        <p class="text-center"><%= @book.num_of_pages %></p>
+        <p class="text-center">Author: <%= @book.author %></p>
+        <p class="text-center">Number of pages: <%= @book.num_of_pages %></p>
+        <p class="text-center">Category: <%= @book.category %></p>
+        <p class="text-center">Published Year: <%= @book.published_year %></p>
+        <p class="text-center">Description: <%= @book.description %></p>
       </div>
     </div>
     <div class="col-3 align-self-center mx-auto">
       <%= simple_form_for [@book, @bookmarck] do |f| %>
-          <%= f.submit "Add to my List", class:"btn button-colors-2", style:"background-color: #6E85B7;" %>
+        <%= f.submit "Add to my List", class:"btn button-colors-2", style:"background-color: #6E85B7;" %>
       <% end %>
+      <%= link_to new_book_review_path(@book) do %>
+        <button type="button" class="btn btn-dark">Review</button>
+      <%end %>
     </div>
   </div>
 </div>

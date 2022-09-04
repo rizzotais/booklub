@@ -14,10 +14,9 @@ Rails.application.routes.draw do
 
   resources :books, only: %i[index show] do
     resources :bookmarks, only: %i[create]
+    resources :reviews, only: %i[new create]
   end
 
   resources :users, only: [:show]
-  resources :lists, except: %i[edit update] do
-    resources :reviews, only: %i[new create]
-  end
+  resources :lists, except: %i[edit update]
 end
