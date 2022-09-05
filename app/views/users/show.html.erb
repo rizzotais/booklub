@@ -1,20 +1,35 @@
 <%= render "shared/nav_search" %>
 
 <div class="container">
-  <h1 class="h1w">Welcome!</h1>
-  <h3 style="padding-left: 200px">You are reading <%= @book.title %> </h3>
-  <div class="row">
-    <p>How many pages have you read so far?</p>
-    <p style="">87</p>
-    <p>Here is your Book List:</p>
-      <% current_user.list.bookmarks.each do |bookmark|%>
-      <div class="card-usershow">
-        <img src="<%= bookmark.book.img_book %>"/>
-        <div class="card-usershow-infos">
-          <h2><%= bookmark.book.title %></h2>
-          <p><%= bookmark.book.author %></p>
-        </div>
-      </div>
+  <div class="row justify-content-center">
+   <h1 class="text-center mt-4"><span style="color:#6E85B7;">Welcome!</span></h1>
+    <div class="col-9 p-5 mt-3" style="background-color: white; border-radius:10px;">
+    <h4>What book are your reading?</h4>
+    <%= simple_form_for [@user, @reading] do |f| %>
+    <%= f.association :book%>
+    <%= f.input :given_page%>
+    <%= f.button :submit, "Done!", class:"btn button-colors-2", style:"background-color: #6E85B7;"%>
+    <%end %>
+    </div>
+    <div class="col-9 p-5 mt-3" style="background-color: white; border-radius:10px;">
+      <% current_user.readings.each do |r| %>
+      <h3><%= r.book.title %></h3>
+      <p><%= r.given_page %>/ <%= r.book.num_of_pages %> Pages</p>
       <% end %>
+    </div>
+
+    <div class="col-9 p-5 mt-3 mb-4" style="background-color: white; border-radius:10px;">
+      <h4>Here is your Book List:</h4>
+      <br>
+      <% current_user.list.bookmarks.each do |bookmark|%>
+        <div class="card-usershow">
+          <img src="<%= bookmark.book.img_book%>"/>
+          <div class="card-usershow-infos">
+            <h2><%= bookmark.book.title %></h2>
+            <p><%= bookmark.book.author %></p>
+          </div>
+        </div>
+      <% end %>
+    </div>
   </div>
 </div>

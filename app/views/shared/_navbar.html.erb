@@ -23,11 +23,14 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto">
         <% if user_signed_in? %>
-          <li class="nav-item active">
-            <%= link_to  "About", about_path, class: "nav-link" %>
+          <li class="nav-item">
+            <%= link_to "Books", books_path, class: "nav-link" %>
           </li>
           <li class="nav-item">
             <%= link_to "Connect", "#", class: "nav-link" %>
+          </li>
+          <li class="nav-item active">
+            <%= link_to  "About", about_path, class: "nav-link" %>
           </li>
           <li class="nav-item dropdown">
             <%= image_tag "https://images.unsplash.com/photo-1554151228-14d9def656e4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=986&q=80", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>

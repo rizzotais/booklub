@@ -17,7 +17,7 @@ user.save!
 require "json"
 require "open-uri"
 
-array = ["lordoftherings", "thetwilightsaga", "harrypotter", "mebeforeyou", "FiftyShadesofGrey", "disney", "TheChroniclesofNarnia"]
+array = ["lordoftherings", "thetwilightsaga", "harrypotter", "mebeforeyou", "FiftyShadesofGrey", "disney", "TheChroniclesofNarnia", "principito"]
 array.each do |title|
   url = "https://www.googleapis.com/books/v1/volumes?q=#{title}"
   book_serialized = URI.open(url).read
