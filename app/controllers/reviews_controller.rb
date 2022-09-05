@@ -2,15 +2,15 @@ class ReviewsController < ApplicationController
   before_action :set_book, only: %i[new create]
 
   def new
-    @book = Book.find(params[:book_id])
     @review = Review.new
   end
 
   def create
     @review = Review.new(review_params)
+    @review.book = @book
     @review.user = current_user
-    if @review.save
-      redirect_to new_book_review_path
+    if @review.save!
+      redirect_to book_path(@book)
     else
       flash[:alert] = "Something went wrong."
       render :new
