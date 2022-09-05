@@ -2,30 +2,53 @@
 <%= render "shared/navbar3" %>
 
 <div class="container">
-  <div class="row">
-    <div class="col-3 mt-3">
-      <img src="<%= @book.img_book %>", style="width:200px;"/>
-    </div>
-    <div class="col-6 mt-3">
-      <div class="card-text" >
-        <h1 class="text-center"><%= @book.title %></h1>
-        <p class="text-center">Author: <%= @book.author %></p>
-        <p class="text-center">Number of pages: <%= @book.num_of_pages %></p>
-        <p class="text-center">Category: <%= @book.category %></p>
-        <p class="text-center">Published Year: <%= @book.published_year %></p>
-        <p class="text-center">Description: <%= @book.description %></p>
+  <div class="card-book">
+    <div class="row justify-content-center">
+      <div class="col-2 mt-3">
+        <img src="<%= @book.img_book %>", style="width:100%; border-radius:5px; margin: 15px 0;"/>
+      </div>
+      <div class="col-6 mt-3">
+        <div class="card-text" >
+          <h1 class="text-center"><%= @book.title %></h1>
+          <div class="d-flex justify-content-between" style="">
+            <p class="text-center"><span style="color:#6E85B7">Author: </span> <%= @book.author %></p>
+            <p class="text-center"><span style="color:#6E85B7">Number of pages: </span><%= @book.num_of_pages %></p>
+          </div>
+          <div class="d-flex justify-content-between" style="">
+          <p class="text-center"><span style="color:#6E85B7">Category: </span><%= @book.category %></p>
+          <p class="text-center"><span style="color:#6E85B7">Published Year: </span><%= @book.published_year %></p>
+          </div>
+          <p class="justify-content-center"><span style="color:#6E85B7">Description: </span><%= @book.description %></p>
+        </div>
+      </div>
+      <div class="col-2 align-self-center" style="margin-left:60px;">
+        <%= simple_form_for [@book, @bookmarck] do |f| %>
+          <%= f.submit "Add to my List", class:"btn button-colors-2", style:"background-color: #6E85B7;" %>
+        <% end %>
+        <div class="col-2 align-self-center" style="margin-left:20px;">
+          <%= link_to new_book_review_path(@book) do %>
+          <button type="button" class="btn btn-dark">Review</button>
+        </div>
+        <%end %>
       </div>
     </div>
-    <div class="col-3 align-self-center mx-auto">
-      <%= simple_form_for [@book, @bookmarck] do |f| %>
-        <%= f.submit "Add to my List", class:"btn button-colors-2", style:"background-color: #6E85B7;" %>
-      <% end %>
-      <%= link_to new_book_review_path(@book) do %>
-        <button type="button" class="btn btn-dark">Review</button>
-      <%end %>
+  </div>
+
+  <div class="container">
+    <div class="">
+      <div class="row justify-content-center">
+        <% @book.reviews.each do |r| %>
+          <div class="card-review col-10 m-3 p-3">
+            <div class="d-flex justify-content-between">
+              <p><span style="color:#6E85B7">User: </span><%= r.user.email %></p>
+              <p><span style="color:#6E85B7">Rating: </span><%= "⭐️"*r.rating %></p>
+            </div>
+            <div class="">
+              <p class=""><span style="color:#6E85B7">Comment: </span><%= r.comment %></p>
+            </div>
+          </div>
+        <% end %>
+      </div>
     </div>
-    <%= @book.reviews.each do |r| %>
-    <%= r.comment %>
-    <% end %>
   </div>
 </div>
