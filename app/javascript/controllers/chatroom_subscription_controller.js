@@ -39,4 +39,7 @@ export default class extends Controller {
   #userStyleClass(currentUserIsSender) {
     return currentUserIsSender ? “sender-style” : “receiver-style”
   }
+  resetForm(event) {
+    event.target.reset()
+  }
 }

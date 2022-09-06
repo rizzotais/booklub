@@ -12,5 +12,6 @@ class BooksController < ApplicationController
     @book = Book.find(params[:id])
     @bookmarck = Bookmark.new
     @list = current_user.list
+    @chatroom = Chatroom.find_by(name: @book.title)
   end
 end

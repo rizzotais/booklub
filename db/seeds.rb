@@ -6,6 +6,9 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 require "faker"
+Message.destroy_all
+List.destroy_all
+Review.destroy_all
 User.destroy_all
 Book.destroy_all
 user = User.new(
@@ -42,5 +45,6 @@ array.each do |title|
       book.img_book = book_hash["volumeInfo"]["imageLinks"]["smallThumbnail"]
       book.save!
     end
+    Chatroom.create(name: book.title)
   end
 end
