@@ -11,6 +11,12 @@ class Book < ApplicationRecord
       tsearch: { prefix: true }
     }
 
+    pg_search_scope :search_by_category,
+    against: [ :category ],
+    using: {
+      tsearch: { prefix: true }
+    }
+
 
   validates :title, length: { minimum: 1 }
 
