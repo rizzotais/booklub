@@ -1,11 +1,18 @@
+.bgcolor {
+  background-color: #6E85B7
+}
 .chatroom {
   background: white;
-  margin-top: 9px;
+  margin-top: 0px;
   height: calc(100vh - 75px);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   flex-grow: 1;
+  padding: 40px;
+  border-radius: 32px;
+  background-color: #C4D7E0;
+
 
   h1 {
     border-bottom: 1px solid $gray-200;

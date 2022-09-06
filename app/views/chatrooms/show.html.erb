@@ -1,16 +1,19 @@
-<div class="container chatroom"
-  data-controller="chatroom-subscription"
-  data-chatroom-subscription-chatroom-id-value="<%= @chatroom.id %>"
->
-  <h1>#<%= @chatroom.name %></h1>
+<div class="bgcolor">
+  <div class="container chatroom"
+    data-controller="chatroom-subscription"
+    data-chatroom-subscription-chatroom-id-value="<%= @chatroom.id %>"
+    >
+    <h1>#<%= @chatroom.name %></h1>
 
-<div class="messages" data-chatroom-subscription-target="messages">
-  <% @chatroom.messages.each do |message| %>
-    <%= render "messages/message", message: message %>
-  <% end %>
+    <div class="messages" data-chatroom-subscription-target="messages">
+    <% @chatroom.messages.each do |message| %>
+      <%= render "messages/message", message: message %>
+    <% end %>
+    </div>
+    <%= simple_form_for [@chatroom, @message],
+    html: { data: { action: "turbo:submit-end->chatroom-subscription#resetForm" }, class: "d-flex" } do |f| %>
+    <%=f.input :content, :as => :text, :input_html => {:cols => 100, :rows => 2}%>
+    <%=f.button "submit", value: "Send", id:"send", class:"btn btn-primary btn-sm"%>
+    <% end %>
+  </div>
 </div>
-<%= simple_form_for [@chatroom, @message],
-  html: { data: { action: "turbo:submit-end->chatroom-subscription#resetForm" }, class: "d-flex" } do |f| %>
-  <%=f.input :content, :as => :text, :input_html => {:cols => 100, :rows => 2}%>
-  <%=f.button "submit", value: "Send", id:"send", class:"btn btn-primary rounded-pill"%>
-<% end %>
