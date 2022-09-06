@@ -1,7 +1,4 @@
 class MessagesController < ApplicationController
-end
-
-class MessagesController < ApplicationController
   def create
     @chatroom = Chatroom.find(params[:chatroom_id])
     @message = Message.new(message_params)
@@ -9,6 +6,11 @@ class MessagesController < ApplicationController
     @message.user = current_user
     if @message.save
       redirect_to chatroom_path(@chatroom)
+      ChatroomChannel.broadcast_to(
+        @chatroom,
+        render_to_string(partial: "message", locals: {message: @message})
+      )
+      head :ok
     else
       render "chatrooms/show", status: :unprocessable_entity
     end
