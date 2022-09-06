@@ -17,6 +17,8 @@ Rails.application.routes.draw do
     resources :reviews, only: %i[new create]
   end
 
+  resources :bookmarks, only: %i[destroy]
+
   resources :users, only: [:show]
   resources :lists, except: %i[edit update]
 
@@ -30,7 +32,7 @@ Rails.application.routes.draw do
   resources :lists, except: %i[edit update]
 
   resources :users, only: [:show] do
-    resources :readings, only: %i[create]
+    resources :readings, only: %i[create update]
   end
-
+  resources :readings, only: %i[destroy]
 end

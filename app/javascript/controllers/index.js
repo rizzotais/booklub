@@ -4,8 +4,11 @@
 
 import { application } from "./application"
 
-import ChatroomSubscriptionController from "./chatroom_subscription_controller"
-application.register("chatroom-subscription", ChatroomSubscriptionController)
+// import ChatroomSubscriptionController from "./chatroom_subscription_controller"
+// application.register("chatroom-subscription", ChatroomSubscriptionController)
+
+import EditBookController from "./edit_book_controller"
+application.register("edit-book", EditBookController)
 
 import FormSubmitController from "./form_submit_controller"
 application.register("form-submit", FormSubmitController)

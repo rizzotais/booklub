@@ -11,13 +11,11 @@
     <%= f.button :submit, "Done!", class:"btn button-colors-2", style:"background-color: #6E85B7;"%>
     <%end %>
     </div>
-    <div class="col-9 p-5 mt-3" style="background-color: white; border-radius:10px;">
-      <% current_user.readings.each do |r| %>
-      <h3><%= r.book.title %></h3>
-      <p><%= r.given_page %>/ <%= r.book.num_of_pages %> Pages</p>
+    <div class="d-flex p-3 m-3">
+      <% current_user.readings.each do |reading| %>
+          <%= render "book_info", reading:reading, user:current_user %>
       <% end %>
     </div>
-
     <div class="col-9 p-5 mt-3 mb-4" style="background-color: white; border-radius:10px;">
       <h4>Here is your Book List:</h4>
       <br>
@@ -27,8 +25,12 @@
           <div class="card-usershow-infos">
             <h2><%= bookmark.book.title %></h2>
             <p><%= bookmark.book.author %></p>
+            <%= bookmark.book.id %>
           </div>
         </div>
+        <i class="fa-regular fa-trash"><%= link_to "Delete",
+        bookmark_path(bookmark),
+        data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}%></i>
       <% end %>
     </div>
   </div>

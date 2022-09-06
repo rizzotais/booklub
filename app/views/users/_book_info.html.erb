@@ -1,0 +1,20 @@
+<div class="movie-card" data-controller="edit-book" data-edit-book-target="card">
+  <%= image_tag reading.book.img_book %>
+
+  <div class="movie-infos <%= 'd-none' if reading.errors.any? %>" data-edit-book-target="infos">
+    <h2><%= reading.book.title %><small> (<%= reading.book.published_year %>)</small></h2>
+    <button aria-label="Edit movie">
+      <i class="fa-solid fa-pen fa-xs ml-2" data-action="click->edit-book#displayForm"></i>
+    </button>
+  </div>
+  <%= simple_form_for [user, reading], html: {class: reading.errors.any? ? "" : "d-none",
+    data: {edit_book_target: 'form', action: "submit->edit-book#update"}} do |f| %>
+    <%= f.input :book, wrapper_html: { class: 'd-none' }%>
+    <%= f.input :given_page, label: 'Type the number of pages'%>
+    <%= f.button :submit, "Done!", class:"btn button-colors-2", style:"background-color: #6E85B7;"%>
+  <%end %>
+    <i class="fa-regular fa-trash"><%= link_to "Delete",
+      reading_path(reading),
+    data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}%></i>
+
+</div>
