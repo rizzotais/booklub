@@ -2,13 +2,14 @@
   <div class="container-fluid">
     <div class="collapse navbar-collapse justify-content-center" id="navbarNavAltMarkup">
       <div class="navbar-nav navbar2-colors padding2">
-        <a class="nav-link active" aria-current="page" href="#">Romance</a>
-        <a class="nav-link active" aria-current="page" href="#">Novel</a>
-        <a class="nav-link active" aria-current="page" href="#">History</a>
-        <a class="nav-link active" aria-current="page" href="#">Wellness</a>
-        <a class="nav-link active" aria-current="page" href="#">Fiction</a>
-        <a class="nav-link active" aria-current="page" href="#">Learning</a>
-        <a class="nav-link active" aria-current="page" href="#">Top Rated</a>
+        <%= link_to "Fiction", books_path(:category => "Fiction"), class: "nav-link active"%>
+        <%= link_to "Philosophy", books_path(:category => "Philosophy"), class: "nav-link active"%>
+        <%= link_to "Drama", books_path(:category => "Drama"), class: "nav-link active"%>
+        <%= link_to "Art", books_path(:category => "Art"), class: "nav-link active"%>
+        <%= link_to "Psychology", books_path(:category => "Psychology"), class: "nav-link active"%>
+        <%= link_to "Education", books_path(:category => "Education"), class: "nav-link active"%>
+        <%= link_to "Travel", books_path(:category => "Travel"), class: "nav-link active"%>
+        <a class="nav-link active" aria-current="page" href="http://localhost:3000/books">Top Rated</a>
       </div>
     </div>
   </div>
