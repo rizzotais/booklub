@@ -2,8 +2,8 @@
 <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),">
   <div class="container container-banner">
     <h1>A new way of find your book and connecting with readers!</h1>
-    <p>Create your lists and share your short stories.</p>
-    <%= link_to "Apply now", new_user_registration_path, class:"btn btn-flat" %>
+    <p>Keep reading!... Find what to read, make groups, check your progress.</p>
+    <%= link_to "Join Us", new_user_registration_path, class:"btn btn-flat" %>
   </div>
 </div>
 
@@ -87,8 +87,7 @@
         <div class="content">
           <h2 class="title"><%=book.title%></h2>
           <%# <p class="copy">Check out all of this amazing novel of the series created by author J.K Rowling.</p> %>
-          <%= link_to "View Book", book_path(book), class: ""%>
-          <button class="btn">View Book</button>
+          <%= link_to "View Book", book_path(book), class: "btn"%>
         </div>
       </div>
 
