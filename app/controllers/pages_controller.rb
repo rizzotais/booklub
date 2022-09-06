@@ -5,6 +5,8 @@ class PagesController < ApplicationController
 
   def home
     @books = Book.all
+
+    @fiction_books = Book.where(category: "Fiction").sample(4)
   end
 
 
