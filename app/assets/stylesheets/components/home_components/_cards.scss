@@ -66,6 +66,7 @@ html, body {
 
 
 .card3 {
+  background-size: cover;
   position: relative;
   display: flex;
   align-items: flex-end;
@@ -132,10 +133,11 @@ html, body {
 
   @each $id in $imageIds {
     $i: index($imageIds, $id);
+      background-repeat: no-repeat;;
 
-    &:nth-child(#{$i}):before {
-      background-image: url(#{$id});
-    }
+    // &:nth-child(#{$i}):before {
+    //   background-image: url(#{$id});
+    // }
   }
 }
 
