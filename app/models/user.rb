@@ -5,8 +5,8 @@ class User < ApplicationRecord
 
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
-  has_many :readings
-  has_many :reviews
+  has_many :readings, dependent: :destroy
+  has_many :reviews, dependent: :destroy
   has_many :books, through: :readings
   has_one :list
 

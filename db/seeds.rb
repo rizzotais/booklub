@@ -8,7 +8,6 @@
 require "faker"
 Message.destroy_all
 List.destroy_all
-Review.destroy_all
 User.destroy_all
 Book.destroy_all
 user = User.new(
@@ -20,7 +19,8 @@ user.save!
 require "json"
 require "open-uri"
 
-array = ["lordoftherings", "thetwilightsaga", "harrypotter", "mebeforeyou", "FiftyShadesofGrey", "disney", "TheChroniclesofNarnia", "principito", "brenebrown", "maybeyoushouldtalktosomeone", "art"]
+array = ["lordoftherings", "thetwilightsaga", "harrypotter", "mebeforeyou", "FiftyShadesofGrey", "disney",
+  "TheChroniclesofNarnia", "principito", "brenebrown", "maybeyoushouldtalktosomeone", "art"]
 array.each do |title|
   url = "https://www.googleapis.com/books/v1/volumes?q=#{title}"
   book_serialized = URI.open(url).read
@@ -48,3 +48,4 @@ array.each do |title|
     Chatroom.create(name: book.title)
   end
 end
+puts "done"
