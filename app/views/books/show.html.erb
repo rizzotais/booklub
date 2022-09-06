@@ -25,11 +25,13 @@
         <%= simple_form_for [@book, @bookmarck] do |f| %>
           <%= f.submit "Add to my List", class:"btn button-colors-2", style:"background-color: #6E85B7;" %>
         <% end %>
-        <div class="col-2 align-self-center" style="margin-left:20px;">
-          <%= link_to new_book_review_path(@book) do %>
+        <%= link_to new_book_review_path(@book) do %>
           <button type="button" class="btn btn-dark">Review</button>
-        </div>
         <%end %>
+        <%= link_to chatroom_path(@chatroom) do %>
+          <i class="fa-light fa-comment-dots"></i>
+        <%end %>
+
       </div>
     </div>
   </div>
