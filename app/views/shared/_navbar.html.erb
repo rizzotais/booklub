@@ -3,10 +3,7 @@
     <%= link_to root_path, class: "navbar-brand" do %>
       <%= image_tag "Booklub.png", class: "logo" %>
     <% end %>
-
-  <%= link_to root_path, class: "navbar-brand" do %>
-    <%= image_tag "https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/logo.png" %>
-  <% end %>
+    
   <% if user_signed_in? %>
   <li class="nav-item dropdown">
     <a class="nav-link" href="#" data-bs-toggle="dropdown"><%= current_user.nickname %></a>
