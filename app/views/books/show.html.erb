@@ -3,7 +3,7 @@
 
 <div class="container">
   <div class="card-book">
-    <div class="row justify-content-center">
+    <div class="row justify-content-center margin-txt">
       <div class="col-2 mt-3">
         <img src="<%= @book.img_book %>", style="width:100%; border-radius:5px; margin: 15px 0;"/>
       </div>
@@ -21,18 +21,18 @@
           <p class="justify-content-center"><span style="color:#6E85B7">Description: </span><%= @book.description %></p>
         </div>
       </div>
-      <div class="col-2 align-self-center" style="margin-left:60px;">
+      <div class="col-2 d-flex flex-column justify-content-center align-items-center">
         <%= simple_form_for [@book, @bookmarck] do |f| %>
           <%= f.submit "Add to my List", class:"btn button-colors-2", style:"background-color: #6E85B7;" %>
         <% end %>
-        <div>
+        <div class="d-flex justify-content-center" style="font-size:29px;">
           <%= link_to new_book_review_path(@book) do %>
             <button type="button" class="btn btn-dark">Review</button>
           <%end %>
         </div>
         <div class="d-flex justify-content-center" style="font-size:29px;">
           <%= link_to chatroom_path(@chatroom) do %>
-            <i class="fa-regular fa-comment"></i>
+            <span style="color: #6E85B7;"><i class="fa-regular fa-comment"></i></span>
           <%end %>
         </div>
 
