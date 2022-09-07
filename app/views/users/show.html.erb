@@ -24,10 +24,11 @@
       </div>
     </div>
 
-    <div class="col-9 p-4 mt-3 mb-5" style="background-color: #B2C7DF; border-radius:10px;">
-      <h5>Your Book List:</h5><br>
+  <div class="col-9 p-4 mt-3 mb-5" style="background-color: #B2C7DF; border-radius:10px;">
+    <h5>Your Book List:</h5><br>
+    <div class="d-flex align-content-around flex-wrap justify-content-center" >
       <% current_user.list.bookmarks.each do |bookmark|%>
-        <div class="card-usershow">
+        <div class="card-usershow ">
           <img src="<%= bookmark.book.img_book%>"/>
           <div class="card-usershow-infos">
             <h2><%= bookmark.book.title %></h2>
@@ -38,10 +39,11 @@
               data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} do%>
               <i class="fa-regular fa-trash"></i>
               <% end %>
-             </div>
+            </div>
           </div>
         </div>
       <% end %>
     </div>
+   </div>
   </div>
 </div>
