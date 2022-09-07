@@ -143,7 +143,10 @@
 // }
 
 .card2:hover {
-  color: var(--color);
+ // color: var(--color);
+  color: white;
+  font-weight: bold;
+ 
 }
 
 .card2:hover:before, .card:hover:after {
