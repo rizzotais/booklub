@@ -5,18 +5,18 @@
   <div class="row justify-content-center">
    <h1 class="text-center mt-4"><span style="color:#6E85B7;">Welcome!</span></h1>
 
-    <div class="col-9 p-5 mt-3" style="background-color: white; border-radius:10px;">
-      <h4>What book are your reading?</h4>
+    <div class="col-9 p-4 mt-3 mb-4" style="background-color: #B2C7DF; border-radius:10px;">
+      <h5>What book are your reading?</h5>
       <%= simple_form_for [@user, @reading] do |f| %>
         <%= f.association :book, :label => 'Pick the book'%>
         <p><%= f.input :given_page, :label => 'How many pages you read' %></p>
         <%= f.button :submit, "Add to my Reading List!", class:"btn button-colors-2",
-          style:"background-color: #6E85B7;"%>
+          style:"background-color: black; margin-left:300px"%>
       <%end %>
     </div>
 
-    <div class="col-9 p-3 m-3" style="background-color: white; border-radius:10px;">
-      <h4>My Reading List</h4>
+    <div class="col-9 p-4 mt-3 mb-4" style="background-color: #B2C7DF; border-radius:10px;">
+      <h5>My Reading List:</h5>
       <div class="d-flex justify-content-evenly">
         <% current_user.readings.each do |reading| %>
           <%= render "book_info", reading:reading, user:current_user %>
@@ -24,8 +24,8 @@
       </div>
     </div>
 
-    <div class="col-9 p-5 mt-3 mb-4" style="background-color: white; border-radius:10px;">
-      <h4>Here is your Book List:</h4><br>
+    <div class="col-9 p-4 mt-3 mb-5" style="background-color: #B2C7DF; border-radius:10px;">
+      <h5>Your Book List:</h5><br>
       <% current_user.list.bookmarks.each do |bookmark|%>
         <div class="card-usershow">
           <img src="<%= bookmark.book.img_book%>"/>
@@ -41,9 +41,7 @@
              </div>
           </div>
         </div>
-
       <% end %>
     </div>
-
   </div>
 </div>
