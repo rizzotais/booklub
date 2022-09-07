@@ -7,12 +7,18 @@
 
     <div class="col-9 p-4 mt-3 mb-4" style="background-color: #B2C7DF; border-radius:10px;">
       <h5>What book are your reading?</h5>
-      <%= simple_form_for [@user, @reading] do |f| %>
-        <%= f.association :book, :label => 'Pick the book'%>
-        <p><%= f.input :given_page, :label => 'How many pages you read' %></p>
-        <%= f.button :submit, "Add to my Reading List!", class:"btn button-colors-2",
-          style:"background-color: black; margin-left:300px"%>
-      <%end %>
+        <%= simple_form_for [@user, @reading], html: {class: "row align-items-end"} do |f| %>
+         <div class="col-12">
+            <%= f.association :book, :label => 'Pick the book'%>
+         </div>
+         <div class="col-6">
+            <p><%= f.input :given_page, :label => 'How many pages you read' %></p>
+         </div>
+         <div class="col-6 d-flex justify-content-center">
+           <%= f.button :submit, "Add to my Reading List!", class:"btn button-colors-2 mb-3",
+            style:"background-color: black;"%>
+         </div>
+        <%end %>
     </div>
 
     <div class="col-9 p-4 mt-3 mb-4" style="background-color: #B2C7DF; border-radius:10px;">
