@@ -20,8 +20,8 @@ require "json"
 require "open-uri"
 
 array = ["lordoftherings", "thetwilightsaga", "harrypotter", "mebeforeyou", "FiftyShadesofGrey", "disney",
-  "TheChroniclesofNarnia", "principito", "brenebrown", "maybeyoushouldtalktosomeone",
-  "Art", "drama", "travel", "philosophy", "education", "fiction"]
+         "The Chronicles of Narnia", "principito", "brenebrown", "maybeyoushouldtalktosomeone",
+         "Art", "drama", "travel", "philosophy", "education", "fiction"]
 array.each do |title|
   url = "https://www.googleapis.com/books/v1/volumes?q=search+#{title}"
   book_serialized = URI.open(url).read
@@ -29,6 +29,7 @@ array.each do |title|
 
   book["items"].each do |book_hash|
     next if book_hash["volumeInfo"]["title"] == ""
+
     book = Book.create!(
       title: book_hash["volumeInfo"]["title"],
       description: book_hash["volumeInfo"]["description"],
