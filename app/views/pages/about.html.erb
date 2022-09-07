@@ -1,53 +1,43 @@
 <div class="container-fluid body1">
-  <div class="row">
-    <div class="col-9 d-flex flex-column justify-content-center textfix">
-      <h1 class="align-self-center">About us!</h1>
-      <p class="align-self-center">Booklub is the world’s largest website for readers and book recommendations.</p>
-      <p>Our mission is to make reading accessible and to encourage people to read more by finding and share books they love.</p>
-      <p>Here you can see what books your friends are reading and track the books you’re reading, have read, and want to read.</P>
-      <p class="align-self-center">Made by Le Wagon students!</p>
-    </div>
-    <div class="col-3">
-    <%= link_to "https://www.linkedin.com/in/tais-rizzo-553b9b14b/" do %>
-      <div class="person">
-        <div class="container container-person">
-          <div class="container-inner">
-            <img class="circle" src="https://res.cloudinary.com/dzptgersg/image/upload/v1662068907/Perfiles/logolwagon_nz9hml.png"/>
-            <img class="img img1" src="https://res.cloudinary.com/dzptgersg/image/upload/v1662070646/Perfiles/picwish_1_pqotjq.png"/>
-          </div>
-        </div>
-
-        <div class="name">Tais - Web Dev
+  <div class="row justify-content-center">
+    <div class="col-9">
+      <div class="container-card">
+        <div class="container-text">
+          <h1 class="text-center margin-txt">About us!</h1>
+          <p class="text-center">Booklub is the world’s largest website for readers and book recommendations.</p>
+          <p>Our mission is to make reading accessible and to encourage people to read more by finding and share books they love.</p>
+          <p>Here you can see what books your friends are reading and track the books you’re reading, have read, and want to read.</P>
+          <p class="text-center">Made by Le Wagon students!</p>
         </div>
       </div>
-    <% end %>
-
-      <%= link_to "www.linkedin.com/in/juanbezanilla/" do %>
-
-        <div class="person">
-          <div class="container container-person">
-            <div class="container-inner">
-              <img class="circle" src="https://res.cloudinary.com/dzptgersg/image/upload/v1662068907/Perfiles/logolwagon_nz9hml.png"/>
-              <img class="img img2" src="https://res.cloudinary.com/dzptgersg/image/upload/v1662068701/Perfiles/juann_1_1_sxyowu.png"/>
-            </div>
-          </div>
-
-          <div class="name">Juan - Web Dev
-          </div>
-        </div>
-      <% end %>
-      <%= link_to "https://www.linkedin.com/in/uumarck/" do %>
-        <div class="person">
-          <div class="container container-person">
-            <div class="container-inner">
-              <img class="circle" src="https://res.cloudinary.com/dzptgersg/image/upload/v1662068907/Perfiles/logolwagon_nz9hml.png"/>
-              <img class="img img3" src="https://res.cloudinary.com/dzptgersg/image/upload/v1662068700/Perfiles/marckk_yv9wyg.png"/>
-            </div>
-          </div>
-          <div class="name">Marck - Web Dev
-          </div>
-        </div>
-      <% end %>
     </div>
   </div>
+    <div class="row justify-content-center row-margin">
+      <div class="col-4 ">
+        <%= link_to "https://www.linkedin.com/in/tais-rizzo-553b9b14b/" do %>
+          <div class="">
+            <img class="img img1" src="https://res.cloudinary.com/dzptgersg/image/upload/v1662561797/Perfiles/tais_1_iiboaw.png"/>
+          </div>
+          <div class="name">Tais - Web Dev</div>
+        <% end %>
+      </div>
+
+      <div class="col-4 ">
+        <%= link_to "https://www.linkedin.com/in/juanbezanilla/" do %>
+            <div class="">
+              <img class="img img2" src="https://res.cloudinary.com/dzptgersg/image/upload/v1662561794/Perfiles/juan_1_tf89lo.png"/>
+            </div>
+            <div class="name">Juan - Web Dev</div>
+        <% end %>
+      </div>
+
+      <div class="col-4 ">
+        <%= link_to "https://www.linkedin.com/in/uumarck/" do %>
+            <div class="">
+              <img class="img img3" src="https://res.cloudinary.com/dzptgersg/image/upload/v1662561791/Perfiles/marck_1_crhfs9.png"/>
+            </div>
+            <div class="name">Marck - Web Dev</div>
+        <% end %>
+      </div>
+    </div>
 </div>
