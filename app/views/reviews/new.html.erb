@@ -1,13 +1,15 @@
 <div class="container">
-  <div class="row justify-content-center mt-3">
-    <div class="col-4">
-    <h2>Review</h2>
-      <%= simple_form_for [@book, @review] do |f| %>
-        <%= f.input :comment %>
-        <%= f.input :rating, collection: (1..5).to_a, label: "Rate the book",
-        input_html: {data: {controller: "star-rating"}} %>
-        <%= f.submit "Done!", class:"btn button-colors-2", style:"background-color: #6E85B7;"%>
-      <% end %>
+  <div class="bg-review">
+    <div class="box-rev">
+        <h2 style="color: white; align-items: center;">Review</h2>
+        <%= simple_form_for [@book, @review] do |f| %>
+        <div class="banana">
+          <p><%= f.input :comment, label: "Comment"%></p>
+          <%= f.input :rating, collection: (1..5).to_a, label: "Rate the book",
+          input_html: {data: {controller: "star-rating"}} %>
+          <%= f.submit "Done!", class:"btn button-colors-2", style:"background-color: black;"%>
+          <% end %>
+        </div>
     </div>
   </div>
 </div>
