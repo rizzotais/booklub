@@ -20,19 +20,23 @@ require "json"
 require "open-uri"
 
 array = ["lordoftherings", "thetwilightsaga", "harrypotter", "mebeforeyou", "FiftyShadesofGrey", "disney",
-  "TheChroniclesofNarnia", "principito", "brenebrown", "maybeyoushouldtalktosomeone", "art"]
+         "The Chronicles of Narnia", "principito", "brenebrown", "maybeyoushouldtalktosomeone",
+         "Art", "drama", "travel", "philosophy", "education", "fiction"]
 array.each do |title|
-  url = "https://www.googleapis.com/books/v1/volumes?q=#{title}"
+  url = "https://www.googleapis.com/books/v1/volumes?q=search+#{title}"
   book_serialized = URI.open(url).read
   book = JSON.parse(book_serialized)
 
   book["items"].each do |book_hash|
+    next if book_hash["volumeInfo"]["title"] == ""
+
     book = Book.create!(
       title: book_hash["volumeInfo"]["title"],
       description: book_hash["volumeInfo"]["description"],
       published_year: book_hash["volumeInfo"]["publishedDate"],
       num_of_pages: book_hash["volumeInfo"]["pageCount"]
     )
+    # puts book.title
     if book_hash["volumeInfo"]["categories"]
       book.category = book_hash["volumeInfo"]["categories"][0]
       book.save!
