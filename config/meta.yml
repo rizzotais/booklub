@@ -1,0 +1,5 @@
+meta_product_name: "Booklub"
+meta_title: "Booklub - Let's Book Club!"
+meta_description: "A new way to find books and connect with readers!"
+meta_image: "Booklub.png" # should exist in `app/assets/images/`
+gmail_account: "contact.thebooklub@gmail.com"   
