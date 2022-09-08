@@ -78,28 +78,19 @@ The font *Josefin Sans* and *PT Sans* was choosen to represent elegancy and peac
 1) User can registers their books. The platform offers many features in profile page to be used.
 
 <div align="center">
-
-  ![]
-</div>
+ <img src="https://res.cloudinary.com/dzptgersg/video/upload/v1662669641/Perfiles/gif-mylist_eao0mg.mp4"
 
 <br>
 <br>
 
 2) blablbabla.
-
 <div align="center">
-
-  ![]
+  <img src="https://res.cloudinary.com/dzptgersg/video/upload/v1662669651/Perfiles/gif-review_gdbzgd.mp4"
 </div>
-
 <br>
 <br>
 
 3) A Chatroom for every book, where the user can talk about that book.
-
 <div align="center">
-
-  ![]
-  <img src="">
-
-</div>
+  <img src="https://res.cloudinary.com/dzptgersg/video/upload/v1662669647/Perfiles/git-chatroom_kcrn51.mp4"
+  </div>
