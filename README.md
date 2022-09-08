@@ -1,5 +1,6 @@
 <h1>Welcome the Booklub!</h1>
- <a href="http://www.thebooklub.com/"><img src="https://res.cloudinary.com/dzptgersg/image/upload/v1662649508/Perfiles/BookLub_eaqgqv.png" width="300px">
+ <p align="center">
+ <a href="http://www.thebooklub.com/"><img src="https://res.cloudinary.com/dzptgersg/image/upload/v1662649508/Perfiles/BookLub_eaqgqv.png" width="300px"></p>
 <h2>Pitch</h2>
 
 *Booklub* was first presented as an idea pitched for Le Wagon web fullstack development bootcamp final project.
@@ -94,7 +95,7 @@ The font *Josefin Sans* and *PT Sans* was choosen to represent elegancy and peac
 <br>
 <br>
 
-3) blablabla
+3) A Chatroom for every book, where the user can talk about that book.
 
 <div align="center">
 
