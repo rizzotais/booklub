@@ -23,8 +23,11 @@
   </div>
 
   <div class="d-flex justify-content-end">
+    <%= link_to book_path(reading.book), class:"link-trash" do %>
+      <i class="fa-solid fa-book"></i>
+      <% end %>
     <%= link_to reading_path(reading), class:"link-trash", data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} do%>
-    <i class="fa-regular fa-trash"></i>
+    <i class="fa-regular fa-trash-can"></i>
     <% end %>
   </div>
 </div>
