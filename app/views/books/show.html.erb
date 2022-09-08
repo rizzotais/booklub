@@ -46,7 +46,7 @@
         <% @book.reviews.each do |r| %>
           <div class="card-review col-10 m-3 p-3">
             <div class="d-flex justify-content-between">
-              <p><span style="color:#6E85B7">User: </span><%= r.user.email %></p>
+              <p><span style="color:#6E85B7"><i class="fa-solid fa-user"></i> </span><%= r.user.nickname %></p>
               <p><span style="color:#6E85B7">Rating: </span><%= "⭐️"*r.rating %></p>
             </div>
             <div class="">

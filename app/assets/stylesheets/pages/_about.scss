@@ -1,13 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@900&family=Sumana:wght@700&display=swap");
 .body1 {
-  background-color: #dae3f8;
-  font-family: "Merriweather", serif;
+  background-color: none;
+  font-family: $headers-font;
   margin: 0;
   height: 100vh;
 }
 
 .container-card {
- background-color: #fafbfc;
+ background-color: #B2C7DF;
  padding: 10px;
  margin: 20px;
  border-radius: 10px;
@@ -40,4 +40,12 @@
 
 .name {
  display: inline;
+}
+
+p {
+  font-family: "PT Sans";
+}
+
+h1{
+  font-family: "Josefin Sans";
 }

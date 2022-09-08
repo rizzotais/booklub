@@ -1,22 +1,24 @@
-<%= render "shared/nav_search" %>
-<%= render "shared/navbar3" %>
-<h1 class="index-title">Our books selection!</h1>
-<div class="container-index">
-  <div class="row">
-    <% @books.each do |book| %>
-      <div class= "col-4 mb-3">
-          <div class="card-product">
+<div class="container-books">
+  <%= render "shared/nav_search" %>
+  <%= render "shared/navbar3" %>
+  <h1 class="index-title">Our books selection!</h1>
+  <div class="container-index">
+      <div class="row">
+        <% @books.each do |book| %>
+          <div class= "col-4 mb-3">
+            <div class="card-product">
               <img src= <%= display_img(book) %>, class="card-img-top" alt="...">
               <div class="card-product-infos">
                 <h2><%= book.display_title %></h2>
                 <p><%= book.author %></p>
                 <p>⭐️⭐️⭐️⭐️</p>
                 <%= link_to book_path(book) do %>
-                <button type="button" class="btn btn-dark">Discover</button>
+                <button type="button" class="btn btn-dark mt-2">Discover</button>
                 <%end%>
               </div>
+            </div>
           </div>
+        <%end%>
       </div>
-    <%end%>
   </div>
 </div>
