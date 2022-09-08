@@ -1,5 +1,5 @@
 <h1>Welcome the Booklub!</h1>
-
+ <a href="http://www.thebooklub.com/"><img src="https://res.cloudinary.com/dzptgersg/image/upload/v1662649508/Perfiles/BookLub_eaqgqv.png" width="300px">
 <h2>Pitch</h2>
 
 *Booklub* was first presented as an idea pitched for Le Wagon web fullstack development bootcamp final project.
@@ -15,15 +15,16 @@ The font *Josefin Sans* and *PT Sans* was choosen to represent elegancy and peac
 <h3>Icons</h3>
 
 <div align="left">
-<img src="" alt=""  width="150px">
+<img src="https://res.cloudinary.com/dzptgersg/image/upload/v1662657871/Perfiles/books_2_ufqpbd.png" alt=""  width="150px">
 </div>
 
 <h3>Logos</h3>
 
 <div align="left">
-<img src="" alt="" width="150px">
-
-<img src="" width="150px">
+<img src="https://res.cloudinary.com/dzptgersg/image/upload/v1662657874/Perfiles/Booklub_Logo_lfzsbt.png" alt="" width="150px">
+<br>
+<br>
+<img src="https://res.cloudinary.com/dzptgersg/image/upload/v1662657883/Perfiles/Botton_b3mi7e.png" width="150px">
 </div>
 
 <h2>Tecnologies used</h2>
