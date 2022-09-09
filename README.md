@@ -28,7 +28,7 @@ The font *Josefin Sans* and *PT Sans* was choosen to represent elegancy and peac
 <img src="https://res.cloudinary.com/dzptgersg/image/upload/v1662657883/Perfiles/Botton_b3mi7e.png" width="150px">
 </div>
 
-<h2>Tecnologies used!</h2>
+<h2>Tecnologies used</h2>
 
 <h3>Front-end</h3>
 
