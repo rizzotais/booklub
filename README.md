@@ -45,7 +45,7 @@ The font *Josefin Sans* and *PT Sans* was choosen to represent elegancy and peac
 <ul>
   <li>Ruby/Rails</li>
   <li>PostgreSQL </li>
-  <li>Sidekiq/Redis (Websocket)</li>
+  <li>Redis (Websocket)</li>
   <li>Cloudinary</li>
 </ul>
 
